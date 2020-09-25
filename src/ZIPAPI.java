@@ -23,6 +23,7 @@ public class ZIPAPI implements IArchive {
 
 	@Override
 	public int archive(String path, String outputName) {
+		checkAlgo(outputName);
 		return 0;
 	}
 
@@ -43,11 +44,13 @@ public class ZIPAPI implements IArchive {
 
 	@Override
 	public int unarchive(String archivePath) {
+		checkAlgo(archivePath);
 		return 0;
 	}
 
 	@Override
 	public int unarchive(String archivePath, String outputPath) {
+		checkAlgo(archivePath);
 		return 0;
 	}
 
@@ -68,11 +71,13 @@ public class ZIPAPI implements IArchive {
 
 	@Override
 	public int unarchiveChunk(String archivePath, int chunkSize) {
+		checkAlgo(archivePath);
 		return 0;
 	}
 
 	@Override
 	public int unarchiveChunk(String archivePath, String outputPath, int chunkSize) {
+		checkAlgo(archivePath);
 		return 0;
 	}
 
@@ -80,5 +85,8 @@ public class ZIPAPI implements IArchive {
 	public int unarchiveChunk(String archivePath, String outputPath, Algorithm algo, int chunkSize) {
 		return 0;
 	}
+
+	@Override
+	public Algorithm checkAlgo(String archivePath) {return null;}
 
 }

@@ -21,6 +21,9 @@ public interface IArchive {
     public int unarchiveChunk(String archivePath, String outputPath, int chunkSize);
     public int unarchiveChunk(String archivePath, String outputPath, Algorithm algo, int chunkSize);
 
+    //check Algorithm
+    public Algorithm checkAlgo(String archivePath);
+
     public enum Algorithm {
         TAR,
         GZ,
